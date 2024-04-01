@@ -1,9 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const logger = require('morgan')
-const handlebars = require('express-handlebars')
+const { create } = require('express-handlebars')
 const fileUpload = require('express-fileupload');
+const {toJSON} = require('./helpers/hbs');
 const mongoose = require('mongoose');
+const orderDataModelJson = require('./models/orderDataModel.json')
 mongoose.set("strictQuery", false);
 const mongoDb = "mongodb+srv://sauravb:test123@cluster0.mczbi5s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 mongoose.connect(mongoDb)
@@ -12,12 +14,12 @@ mongoose.connect(mongoDb)
 
 
 const app = express()
-const hbs = handlebars.create({/* Config */})
+
 app.use(bodyParser.json());
 app.use(logger("dev"))
 app.use(fileUpload());
 
-
+const hbs = create({ helpers: { toJSON:toJSON }});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './views');
@@ -39,7 +41,7 @@ app.listen(port, ()=>{
 
 app.get('/', (req, res) =>{
     // res.send("Welcome to the App")
- res.render('home');
+ res.render('home',{result:orderDataModelJson});
 })
 
 app.use('/returns', returnsRoutes)
