@@ -26,6 +26,10 @@
             background-color: #04AA6D;
             color: white;
         }
+        .topnav a.logo {
+            background-color: #06cde7 ;
+            color: white;
+        }
 
         /* Hide the link that should open and close the topnav on small screens */
         .topnav .icon {
