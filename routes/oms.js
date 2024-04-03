@@ -1,13 +1,22 @@
 const express = require('express')
 const router = express.Router()
-const {getOrderStatus, createNewOrder, addOrderDoc }= require('../controllers/omsFunctions')
+const {getOrderStatus, createNewOrder, addOrderDoc, getAllOrders }= require('../controllers/omsFunctions')
 
 router.get('/', (req,res) =>{
-    res.send("Welcome to OMS")
+    res.render("omsHome")
 })
 
-router.get('/orderStatus/:id',(req,res)=>{
-    res.json(getOrderStatus(req.params.id, 'PickQueue',"Order is Currently in Queue to be Picked"))
+router.get('/orders',async(req,res)=>{
+    const orders = await getAllOrders()
+    if (req.headers['content-type'] == 'application/json') {
+        res.json(orders);
+      }else{
+        res.render('omsOrders',{orders:orders})
+      }
+})
+
+router.get('/orderStatus/:id',async (req,res)=>{
+    res.send(await getOrderStatus(req.params.id))
 })
 
 router.post('/createOrder',(req, res)=>{

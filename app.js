@@ -27,7 +27,7 @@ app.set('views', './views');
 app.use(express.static('public'))
 
 
-const port = process.env.port || 3000
+const PORT = process.env.port || 3000
 const returnsRoutes = require('./routes/returns')
 const pos = require('./routes/pos')
 const oms = require('./routes/oms');
@@ -40,7 +40,6 @@ app.listen(PORT, ()=>{
 
 
 app.get('/', (req, res) =>{
-    // res.send("Welcome to the App")
  res.render('home',{result:orderDataModelJson});
 })
 

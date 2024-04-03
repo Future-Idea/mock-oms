@@ -1,0 +1,9 @@
+{{>_omsNavbar}}
+<h1>All Orders</h1>
+{{#each orders}}
+  <p>Order ID: {{orderId}}</p>
+  <p>Customer Name: <span id="customerName">{{CustomerDetails.FirstName}} {{CustomerDetails.LastName}}</span></p>
+  <p>Order Date: <span id="orderDate">{{OrderDetails.OrderDate}}</span></p>
+  <p>Shipping Method Details: <span id="shipMethodDetail">{{ShippingMethodDetails.PromiseDate}}</span></p>
+  <hr>
+{{/each}}
