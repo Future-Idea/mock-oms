@@ -1,6 +1,17 @@
-<h1>Mock OMS Application</h1>
-<h2>APIs Supported:</h2>
-<h3>oms/orderStatus/:id</h3>
-<h3>oms/addOrderDoc/:id</h3>
-<h3>oms/createOrder</h3>
+{{>_Navbar}}
+
+    <h2>Welcome to Mock OMS and POS Server</h2>
+    <h3>OMS APIs Endpoints: - To call these APIs from Postman/Service please use Headers <code>content_type='application/json'</code></h3>
+    <h5>All Orders in OMS:</h5><p>oms/orders</p>
+    <h5>Order Status:</h5><p>oms/orderStatus/:id<p>
+    <h5>Create Order:</h5><p>oms/createOrder</p>
+    <h5>Add Order Doc:</h5><p>oms/addOrderDoc/:id</p>
+
+    
+    <h3>POS APIs Endpoints: - To call these APIs from Postman/Service please use Headers <code>content_type='application/json'</code></h3>
+    <h5>Get All Orders:</h5><p>pos/orders<p>
+    <h5>Get Order Detail:</h5><p>pos/order/:id</p>
+    <h5>Update Order Status:</h5><p>pos/updateOrderStatus</p>
+    Send Json in body. Example:<code> {orderId: "12345",status: "Pending"} <code> 
+
 <pre>{{toJSON result}}</pre>

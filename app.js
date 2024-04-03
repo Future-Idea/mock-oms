@@ -40,7 +40,7 @@ app.listen(PORT, ()=>{
 
 
 app.get('/', (req, res) =>{
- res.render('home',{result:orderDataModelJson});
+ res.render('home');
 })
 
 app.use('/returns', returnsRoutes)
