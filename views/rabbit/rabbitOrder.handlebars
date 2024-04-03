@@ -1,19 +1,16 @@
-   {{>_posNavbar}}
+   {{>_rabbitNavbar}}
   <h1>Order Details</h1>
   <p>Order ID: <span id="orderID">{{order.orderId}}</span></p>
+  <p>Order Status: <span id="orderStatus">{{order.orderStatus}}</span></p>
   <p>Customer Name: <span id="customerName">{{order.CustomerDetails.FirstName}} {{order.CustomerDetails.LastName}}</span></p>
   <p>Order Date: <span id="orderDate">{{order.OrderDetails.OrderDate}}</span></p>
   <p>Shipping Method Details: <span id="shipMethodDetail">{{order.ShippingMethodDetails.PromiseDate}}</span></p>
 
-  <h2>Process Order</h2>
-  <label for="created">Created</label>
-  <input type="checkbox" id="created" name="orderStatus" value="Created" onchange="updateOrderStatus('Created')"><br>
-  <label for="packed">Packed</label>
-  <input type="checkbox" id="packed" name="orderStatus" value="Packed" onchange="updateOrderStatus('Packed')"><br>
-  <label for="labeled">Labeled</label>
-  <input type="checkbox" id="labeled" name="orderStatus" value="Labeled" onchange="updateOrderStatus('Labeled')"><br>
-  <label for="staged">Staged</label>
-  <input type="checkbox" id="staged" name="orderStatus" value="Staged" onchange="updateOrderStatus('Staged')"><br>
+  <h2>Deliver Order</h2>
+  <label for="picked">Picked</label>
+  <input type="checkbox" id="picked" name="orderStatus" value="Picked" onchange="updateOrderStatus('Picked')"><br>
+  <label for="delivered">Delivered</label>
+  <input type="checkbox" id="delivered" name="orderStatus" value="Delivered" onchange="updateOrderStatus('Delivered')"><br>
 
   <p id="responseMessage"></p>
 
@@ -44,6 +41,7 @@
       .then(data => {
         // Display server response on the page
         document.getElementById("responseMessage").textContent = "Order status updated successfully: " + data;
+        document.getElementById("orderStatus").textContent = data;
       })
       .catch(error => {
         // Display error message on the page

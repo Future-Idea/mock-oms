@@ -1,7 +1,8 @@
-{{>_posNavbar}}
-<h1>Active Orders</h1>
+{{>_rabbitNavbar}}
+<h1>All Staged Orders</h1>
 {{#each orders}}
-  <p>Order ID: <a href ="/pos/order/{{orderId}}" id="orderID">{{orderId}}</a></p>
+  <p>Order ID: <a href ="/rabbit/order/{{orderId}}" id="orderID">{{orderId}}</a></p>
+  <p>Order Status: {{orderStatus}}</p>
   <p>Customer Name: <span id="customerName">{{CustomerDetails.FirstName}} {{CustomerDetails.LastName}}</span></p>
   <p>Order Date: <span id="orderDate">{{OrderDetails.OrderDate}}</span></p>
   <p>Shipping Method Details: <span id="shipMethodDetail">{{ShippingMethodDetails.PromiseDate}}</span></p>

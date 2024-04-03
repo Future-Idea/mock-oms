@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const orderSchema = new Schema({
     orderId : {type:Number},
-    orderStatus: {type:String},
+    orderStatus: {type:String, default:"Created"},
     CustomerDetails: {
         ID: {type:Number},
         Email: {type: String},

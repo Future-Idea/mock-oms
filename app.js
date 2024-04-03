@@ -2,7 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const logger = require('morgan')
 const { create } = require('express-handlebars')
-const fileUpload = require('express-fileupload');
 const {toJSON} = require('./helpers/hbs');
 const mongoose = require('mongoose');
 const orderDataModelJson = require('./models/orderDataModel.json')
@@ -17,7 +16,7 @@ const app = express()
 
 app.use(bodyParser.json());
 app.use(logger("dev"))
-app.use(fileUpload());
+
 
 const hbs = create({ helpers: { toJSON:toJSON }});
 app.engine('handlebars', hbs.engine);
@@ -31,6 +30,7 @@ const PORT = process.env.port || 3000
 const returnsRoutes = require('./routes/returns')
 const pos = require('./routes/pos')
 const oms = require('./routes/oms');
+const rabbit = require('./routes/rabbit')
 
 
 
@@ -46,4 +46,5 @@ app.get('/', (req, res) =>{
 app.use('/returns', returnsRoutes)
 app.use('/pos', pos)
 app.use('/oms',oms)
+app.use('/rabbit',rabbit)
 

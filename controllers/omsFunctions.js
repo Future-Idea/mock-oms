@@ -16,11 +16,10 @@ exports.createNewOrder = function(orderPayload){
             IgnoreCreditLimit: true
           }
       });
-      console.log("New Order:",newOrder)
       newOrder.save()
         .then(()=>console.log("Order Created"))
         .catch(()=>console.log(err))
-    return("Order Created Succesfully")
+    return(newOrder)
 }
 
 exports.addOrderDoc = function(orderId, file){
@@ -37,3 +36,8 @@ exports.getAllOrders = async function(){
     return(await Order.find().lean().exec())
 }
 
+
+exports.rejectOrder = async function(id){
+    const updatedOrder = await Order.findOneAndUpdate({orderId:id},{orderStatus:"Rejected"},{new:true})
+    return(updatedOrder)
+}

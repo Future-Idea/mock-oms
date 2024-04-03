@@ -1,7 +1,8 @@
-{{>_omsNavbar}}
-<h1>All Orders</h1>
+{{>_posNavbar}}
+<h1>Newly Created Orders</h1>
 {{#each orders}}
-  <p>Order ID: {{orderId}}</p>
+  <p>Order ID: <a href ="/pos/order/{{orderId}}" id="orderID">{{orderId}}</a></p>
+  <p>Order Status: {{orderStatus}}</p>
   <p>Customer Name: <span id="customerName">{{CustomerDetails.FirstName}} {{CustomerDetails.LastName}}</span></p>
   <p>Order Date: <span id="orderDate">{{OrderDetails.OrderDate}}</span></p>
   <p>Shipping Method Details: <span id="shipMethodDetail">{{ShippingMethodDetails.PromiseDate}}</span></p>
