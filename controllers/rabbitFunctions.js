@@ -5,7 +5,8 @@ exports.pickPackage = function(){
 }
 
 exports.getRabbitOrders = async function(){
-    return(await Order.find({orderStatus:"Staged"}).lean().exec())
+    const statusFilters = ["Staged", "Shipped"];
+    return(await Order.find({orderStatus: { $in: statusFilters }}).lean().exec())
 }
 
 exports.getRabbitOrder = async function(id){

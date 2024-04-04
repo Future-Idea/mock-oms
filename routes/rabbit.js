@@ -11,7 +11,7 @@ router.get('/',(req,res)=>{
 // API Endpoint to Get All Orders ready to be picked in Rabbit App - (Status: Staged)
 router.get('/orders/',async (req,res)=>{
     const orders =await getRabbitOrders()
-    if (req.headers['content-type'] == 'application/json') {
+    if (req.headers['content-type'] === 'application/json') {
         res.json(orders)
     }else{
         res.render('rabbit/rabbitOrders',{orders:orders})
@@ -21,7 +21,7 @@ router.get('/orders/',async (req,res)=>{
 // API Endpoint to Get Order Status of an existing Order
 router.get('/order/:id',async (req,res)=>{
     const order = await getRabbitOrder(req.params.id)
-    if (req.headers['content-type'] == 'application/json') {
+    if (req.headers['content-type'] === 'application/json') {
         res.json(order)
     }else{
      res.render('rabbit/rabbitOrder',{order:order})
