@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {getOrderStatus, createNewOrder, addOrderDoc, getAllOrders, rejectOrder }= require('../controllers/omsFunctions')
+const {getOrderStatus, createNewOrder, addOrderDoc, getAllOrders, rejectOrder , updateOmsOrderStatus }= require('../controllers/omsFunctions')
 
 // API Endpoint for OMS Home Page
 router.get('/', (req,res) =>{
@@ -17,9 +17,14 @@ router.get('/orders',async(req,res)=>{
       }
 })
 
-// API Endpoint to Get Order Status of an existing Order
+// API Endpoint to Get Order Status of an existing Order in OMS
 router.get('/orderStatus/:id',async (req,res)=>{
-    res.send(await getOrderStatus(req.params.id))
+    const order = await getOrderStatus(req.params.id)
+    if (req.headers['content-type'] == 'application/json') {
+        res.json(order)
+    }else{
+        res.render('oms/omsOrder',{order:order})
+    }
 })
 
 // API Endpoint to Create a New Order in OMS
@@ -37,5 +42,8 @@ router.post('/rejectOrder/:id', async (req,res)=>{
     res.send(await rejectOrder(req.params.id))
 })
 
-
+// API Endpoint to Update the Order Status of an existing Order in OMS
+router.post('/updateOmsOrderStatus',async (req,res)=>{
+    res.json(await updateOmsOrderStatus(req.body.orderId, req.body.status))
+})
 module.exports = router

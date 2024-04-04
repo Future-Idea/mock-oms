@@ -3,6 +3,7 @@ const Order = require('../models/order');
 exports.getOrderStatus = async function(id){
    return(await Order.findOne({orderId:id}).lean().exec())
 }
+
 exports.createNewOrder = function(orderPayload){
     const newOrder = new Order({
         orderId: orderPayload.orderId,
@@ -40,4 +41,9 @@ exports.getAllOrders = async function(){
 exports.rejectOrder = async function(id){
     const updatedOrder = await Order.findOneAndUpdate({orderId:id},{orderStatus:"Rejected"},{new:true})
     return(updatedOrder)
+}
+
+exports.updateOmsOrderStatus = async function(orderNum, status){
+    const updatedOrder = await Order.findOneAndUpdate({orderId:orderNum},{orderStatus:status},{new:true})
+    return(updatedOrder.orderStatus)
 }

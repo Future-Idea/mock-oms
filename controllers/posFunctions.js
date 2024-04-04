@@ -10,5 +10,5 @@ exports.updateOrderStatus = async function(orderNum, status){
 }
 
 exports.getNewOrders = async function(){
-    return(await Order.find({orderStatus:"Created"}).lean().exec())
+    return(await Order.find({orderStatus:"Confirm"}).lean().exec())
 }

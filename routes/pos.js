@@ -7,7 +7,7 @@ router.get('/',(req,res)=>{
     res.render("pos/posHome")
 })
 
-// API Endpoint to Get All Orders in POS
+// API Endpoint to Get All Accepted Orders in POS
 router.get('/orders/',async (req,res)=>{
     const orders =await getNewOrders()
     if (req.headers['content-type'] == 'application/json') {

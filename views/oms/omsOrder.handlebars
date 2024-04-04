@@ -1,0 +1,53 @@
+   {{>_omsNavbar}}
+  <h1>Order Details</h1>
+  <p>Order ID: <span id="orderID">{{order.orderId}}</span></p>
+  <p>Order Status: <span id="orderStatus">{{order.orderStatus}}</span></p>
+  <p>Customer Name: <span id="customerName">{{order.CustomerDetails.FirstName}} {{order.CustomerDetails.LastName}}</span></p>
+  <p>Order Date: <span id="orderDate">{{order.OrderDetails.OrderDate}}</span></p>
+  <p>Shipping Method Details: <span id="shipMethodDetail">{{order.ShippingMethodDetails.PromiseDate}}</span></p>
+
+  <h2>Update Order</h2>
+  <label for="confirm">Confirm</label>
+  <input type="checkbox" id="confirm" name="orderStatus" value="confirm" onchange="updateOrderStatus('Confirm')"><br>
+  <label for="reject">Reject</label>
+  <input type="checkbox" id="reject" name="orderStatus" value="reject" onchange="updateOrderStatus('Reject')"><br>
+ 
+  <p id="responseMessage"></p>
+
+  <script>
+    function updateOrderStatus(status) {
+      // Get order ID
+      var orderId = document.getElementById("orderID").textContent;
+
+      // Call API to update order status
+      fetch('/oms/updateOmsOrderStatus/', {
+        method: 'POST',
+         mode: "cors", 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        referrerPolicy: "no-referrer", 
+        body: JSON.stringify({
+          orderId: orderId,
+          status: status
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Display server response on the page
+        document.getElementById("responseMessage").textContent = "Order status updated successfully: " + data;
+        document.getElementById("orderStatus").textContent = data;
+
+      })
+      .catch(error => {
+        // Display error message on the page
+        document.getElementById("responseMessage").textContent = "There was a problem updating order status: " + error.message;
+      });
+    }
+  </script>
+
