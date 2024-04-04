@@ -46,3 +46,7 @@ exports.updateOmsOrderStatus = async function(orderNum, status){
     const updatedOrder = await Order.findOneAndUpdate({orderId:orderNum},{orderStatus:status},{new:true})
     return(updatedOrder.orderStatus)
 }
+
+exports.deleteOMSOrder = async function(id){
+    return(await Order.deleteOne({orderId:id}))
+}

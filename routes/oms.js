@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {getOrderStatus, createNewOrder, addOrderDoc, getAllOrders, rejectOrder , updateOmsOrderStatus }= require('../controllers/omsFunctions')
+const {getOrderStatus, createNewOrder, addOrderDoc, getAllOrders, rejectOrder , updateOmsOrderStatus , deleteOMSOrder }= require('../controllers/omsFunctions')
 
 // API Endpoint for OMS Home Page
 router.get('/', (req,res) =>{
@@ -45,5 +45,10 @@ router.post('/rejectOrder/:id', async (req,res)=>{
 // API Endpoint to Update the Order Status of an existing Order in OMS
 router.post('/updateOmsOrderStatus',async (req,res)=>{
     res.json(await updateOmsOrderStatus(req.body.orderId, req.body.status))
+})
+
+//API Endpoint to Delete Order in OMS
+router.post('/deleteOrder/:id',async (req,res)=>{
+    res.json(await deleteOMSOrder(req.params.id))
 })
 module.exports = router
