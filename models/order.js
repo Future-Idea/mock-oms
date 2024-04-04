@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const orderSchema = new Schema({
-    orderId : {type:Number},
-    orderStatus: {type:String, default:"Created"},
+    OrderId : {type:Number},
+    OrderStatus: {type:String, default:"Created"},
     CustomerDetails: {
         ID: {type:Number},
         Email: {type: String},
