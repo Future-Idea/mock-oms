@@ -10,7 +10,7 @@ router.get('/', (req,res) =>{
 // API Endpoint to Get All Orders in OMS
 router.get('/orders',async(req,res)=>{
     const orders = await getAllOrders()
-    if (req.headers['content-type'] == 'application/json') {
+    if (req.headers['content-type'] === 'application/json') {
         res.json(orders);
       }else{
         res.render('oms/omsOrders',{orders:orders})
@@ -20,7 +20,7 @@ router.get('/orders',async(req,res)=>{
 // API Endpoint to Get Order Status of an existing Order in OMS
 router.get('/orderStatus/:id',async (req,res)=>{
     const order = await getOrderStatus(req.params.id)
-    if (req.headers['content-type'] == 'application/json') {
+    if (req.headers['content-type'] === 'application/json') {
         res.json(order)
     }else{
         res.render('oms/omsOrder',{order:order})

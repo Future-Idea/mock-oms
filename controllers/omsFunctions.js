@@ -37,7 +37,6 @@ exports.getAllOrders = async function(){
     return(await Order.find().lean().exec())
 }
 
-
 exports.rejectOrder = async function(id){
     const updatedOrder = await Order.findOneAndUpdate({orderId:id},{orderStatus:"Rejected"},{new:true})
     return(updatedOrder)

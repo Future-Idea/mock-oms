@@ -10,5 +10,6 @@ exports.updateOrderStatus = async function(orderNum, status){
 }
 
 exports.getNewOrders = async function(){
-    return(await Order.find({orderStatus:"Confirm"}).lean().exec())
+    const statusFilters = ["Confirm", "Packed", "Labeled"];
+    return await Order.find({ orderStatus: { $in: statusFilters } }).lean().exec();
 }
