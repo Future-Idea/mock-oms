@@ -13,7 +13,7 @@ exports.getRabbitOrder = async function(id){
     return(await Order.findOne({orderId:id}).lean().exec())
  }
 
- exports.updateRabbitOrderStatus = async function(orderNum, status){
+ exports.updateOrderStatus = async function(orderNum, status){
     const updatedOrder = await Order.findOneAndUpdate({orderId:orderNum},{orderStatus:status},{new:true})
     return(updatedOrder.orderStatus)
 }

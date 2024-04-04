@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { pickPackage, getRabbitOrders, getRabbitOrder , updateRabbitOrderStatus }= require('../controllers/rabbitFunctions')
+const { pickPackage, getRabbitOrders, getRabbitOrder , updateOrderStatus }= require('../controllers/rabbitFunctions')
 
 // Endpoint for Rabbit Home Page
 router.get('/',(req,res)=>{
@@ -29,7 +29,7 @@ router.get('/order/:id',async (req,res)=>{
 })
 
 // API Endpoint to Update the Order Status of an existing Order in Rabbit App
-router.post('/updateOrderStatus',async (req,res)=>{
+router.post('/updateRabbitOrderStatus',async (req,res)=>{
     res.json(await updateOrderStatus(req.body.orderId, req.body.status))
 })
 
