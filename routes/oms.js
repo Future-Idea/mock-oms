@@ -34,6 +34,12 @@ router.post('/createOrder',(req, res)=>{
 
 // API Endpoint to Add a Document to an existig Order
 router.post('/addOrderDoc/:id',(req, res)=>{
+    console.log(req.body)
+    res.json(addOrderDoc(req.params.id,req.body))
+})
+
+// API Endpoint to Get a Document to an existig Order
+router.get('/addOrderDoc/:id',(req, res)=>{
     res.json(addOrderDoc(req.params.id,req.files.File))
 })
 

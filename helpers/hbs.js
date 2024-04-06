@@ -1,5 +1,5 @@
 module.exports = {
-     toJSON: function(input) {
-        return JSON.stringify(input, null, 3);
-    }
+  toJSON: function (input) {
+    return JSON.stringify(input, null, 3);
+  }
 }

@@ -1,121 +1,121 @@
 {
+  "ID": 0,
+  "CustomerDetails": {
     "ID": 0,
-     "CustomerDetails": {
-       "ID": 0,
-       "Email": "string",
-       "FirstName": "string",
-       "LastName": "string",
-       "Business": "string",
-       "IsWholesale": true,
-       "IgnoreCreditLimit": true
-     },
-     "OrderDetails": {
-       "CompanyID": 0,
-       "MarketingSource": 0,
-       "SalesRepresentative": 0,
-       "IsCurrencyVisible": true,
-       "CurrencyCode": 0,
-       "CurrencyRateFromUSD": 0,
-       "CurrencyRateToUSD": 0,
-       "TaxExempt": true,
-       "IsQuoteOrder": true,
-       "IsSampleOrder": true,
-       "GiftOrder": true,
-       "Channel": 0,
-       "OrderSourceOrderID": "string",
-       "DisableInventoryCount": true,
-       "OrderDate": "2024-03-06T15:25:58.266Z",
-       "EbaySellingManagerSalesRecordNumber": "string"
-     },
-     "GiftDetails": {
-       "UseGiftWrap": true,
-       "GiftMessage": "string",
-       "GiftWrap": 0,
-       "GiftWrapType": "string"
-     },
-     "Products": [
-       {
-         "ProductID": "string",
-         "ReferenceID": "string",
-         "ProductName": "string",
-         "SitePrice": 0,
-         "DiscountValue": 0,
-         "DiscountType": 0,
-         "Qty": 0,
-         "LineTaxTotal": 0,
-         "FinalValueFee": 0,
-         "Notes": "string",
-         "ShipFromWareHouseID": 0
-       }
-     ],
-     "ShippingAddress": {
-       "Business": "string",
-       "FirstName": "string",
-       "MiddleName": "string",
-       "LastName": "string",
-       "Country": "string",
-       "City": "string",
-       "State": "string",
-       "Region": "string",
-       "ZipCode": "string",
-       "Address": "string",
-       "Address2": "string",
-       "Phone": "string",
-       "Fax": "string"
-     },
-     "BillingAddress": {
-       "Business": "string",
-       "FirstName": "string",
-       "MiddleName": "string",
-       "LastName": "string",
-       "Country": "string",
-       "City": "string",
-       "State": "string",
-       "Region": "string",
-       "ZipCode": "string",
-       "Address": "string",
-       "Address2": "string",
-       "Phone": "string",
-       "Fax": "string"
-     },
-     "ShippingMethodDetails": {
-       "Carrier": "string",
-       "ShippingMethod": "string",
-       "Weight": {
-         "Pounds": 0,
-         "Ounces": 0
-       },
-       "Dimension": {
-         "Width": 0,
-         "Height": 0,
-         "Length": 0
-       },
-       "HandlingFee": 0,
-       "ShippingFee": 0,
-       "InsuranceFee": 0,
-       "LockShippingMethod": true,
-       "RushOrder": true,
-       "RequirePinToShip": true,
-       "OtherCarrier": "string",
-       "OtherMethod": "string",
-       "PromiseDate": "2024-03-06T15:25:58.266Z",
-       "AllowShippingEvenNotPaid": true
-     },
-     "Notes": [
-       {
-         "EntityID": 0,
-         "Category": 0,
-         "NoteID": 0,
-         "Note": "string",
-         "AuditDate": "2024-03-06T15:25:58.266Z",
-         "CreatedBy": 0,
-         "CreatedByName": "string",
-         "CreatedByEmail": "string",
-         "UsersToNotify": [
-           0
-         ],
-         "IsPinned": true,
-         "AllowEditPinnedOrder": true
-       }
-     ]
-   }
+    "Email": "string",
+    "FirstName": "string",
+    "LastName": "string",
+    "Business": "string",
+    "IsWholesale": true,
+    "IgnoreCreditLimit": true
+  },
+  "OrderDetails": {
+    "CompanyID": 0,
+    "MarketingSource": 0,
+    "SalesRepresentative": 0,
+    "IsCurrencyVisible": true,
+    "CurrencyCode": 0,
+    "CurrencyRateFromUSD": 0,
+    "CurrencyRateToUSD": 0,
+    "TaxExempt": true,
+    "IsQuoteOrder": true,
+    "IsSampleOrder": true,
+    "GiftOrder": true,
+    "Channel": 0,
+    "OrderSourceOrderID": "string",
+    "DisableInventoryCount": true,
+    "OrderDate": "2024-03-06T15:25:58.266Z",
+    "EbaySellingManagerSalesRecordNumber": "string"
+  },
+  "GiftDetails": {
+    "UseGiftWrap": true,
+    "GiftMessage": "string",
+    "GiftWrap": 0,
+    "GiftWrapType": "string"
+  },
+  "Products": [
+    {
+      "ProductID": "string",
+      "ReferenceID": "string",
+      "ProductName": "string",
+      "SitePrice": 0,
+      "DiscountValue": 0,
+      "DiscountType": 0,
+      "Qty": 0,
+      "LineTaxTotal": 0,
+      "FinalValueFee": 0,
+      "Notes": "string",
+      "ShipFromWareHouseID": 0
+    }
+  ],
+  "ShippingAddress": {
+    "Business": "string",
+    "FirstName": "string",
+    "MiddleName": "string",
+    "LastName": "string",
+    "Country": "string",
+    "City": "string",
+    "State": "string",
+    "Region": "string",
+    "ZipCode": "string",
+    "Address": "string",
+    "Address2": "string",
+    "Phone": "string",
+    "Fax": "string"
+  },
+  "BillingAddress": {
+    "Business": "string",
+    "FirstName": "string",
+    "MiddleName": "string",
+    "LastName": "string",
+    "Country": "string",
+    "City": "string",
+    "State": "string",
+    "Region": "string",
+    "ZipCode": "string",
+    "Address": "string",
+    "Address2": "string",
+    "Phone": "string",
+    "Fax": "string"
+  },
+  "ShippingMethodDetails": {
+    "Carrier": "string",
+    "ShippingMethod": "string",
+    "Weight": {
+      "Pounds": 0,
+      "Ounces": 0
+    },
+    "Dimension": {
+      "Width": 0,
+      "Height": 0,
+      "Length": 0
+    },
+    "HandlingFee": 0,
+    "ShippingFee": 0,
+    "InsuranceFee": 0,
+    "LockShippingMethod": true,
+    "RushOrder": true,
+    "RequirePinToShip": true,
+    "OtherCarrier": "string",
+    "OtherMethod": "string",
+    "PromiseDate": "2024-03-06T15:25:58.266Z",
+    "AllowShippingEvenNotPaid": true
+  },
+  "Notes": [
+    {
+      "EntityID": 0,
+      "Category": 0,
+      "NoteID": 0,
+      "Note": "string",
+      "AuditDate": "2024-03-06T15:25:58.266Z",
+      "CreatedBy": 0,
+      "CreatedByName": "string",
+      "CreatedByEmail": "string",
+      "UsersToNotify": [
+        0
+      ],
+      "IsPinned": true,
+      "AllowEditPinnedOrder": true
+    }
+  ]
+}
