@@ -35,7 +35,10 @@
         .topnav .icon {
             display: none;
         }
-
+        .shippingLabel {
+            float: right;
+            border: 10px solid;
+        }
         /* Media query for screens less than 600px wide */
         @media screen and (max-width: 600px) {
             .topnav a:not(:first-child) {

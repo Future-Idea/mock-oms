@@ -6,7 +6,7 @@
   <p>Order Date: <span id="orderDate">{{order.OrderDetails.OrderDate}}</span></p>
   <p>Shipping Method Details: <span id="shipMethodDetail">{{order.ShippingMethodDetails.PromiseDate}}</span></p>
   {{#if doc.File.FileContent}}
-  <p>Shipping Label:</p><p><span id="shipLabel"><img src="data:image/png;base64, {{doc.File.FileContent}}"/></span></p>
+  <p>Shipping Label:</p><p><span id="shipLabel"><img class ="shippingLabel" src="data:image/png;base64, {{doc.File.FileContent}}"/></span></p>
   {{/if}}
 
   <h2>Process Order</h2>
