@@ -33,9 +33,11 @@ router.post('/createOrder',(req, res)=>{
 })
 
 // API Endpoint to Add a Document to an existig Order
-router.post('/addOrderDoc/:id',(req, res)=>{
+router.post('/addOrderDoc/:id', async (req, res)=>{
     console.log(req.body)
-    res.json(addOrderDoc(req.params.id,req.body))
+    const response = addOrderDoc(req.params.id, req.body)
+    await updateOmsOrderStatus(req.params.id, "ShiplabelGenerated")
+    res.json(response)
 })
 
 // API Endpoint to Get a Document to an existig Order

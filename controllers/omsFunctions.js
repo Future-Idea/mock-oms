@@ -16,6 +16,20 @@ exports.createNewOrder = function (orderPayload) {
       Business: orderPayload.CustomerDetails.Business,
       IsWholesale: false,
       IgnoreCreditLimit: true
+    },
+    OrderDetails: {
+      OrderSourceOrderID: orderPayload.OrderDetails?.OrderSourceOrderID,
+    },
+    ShippingMethodDetails: { // Including in create for now to store recommended packages
+      Weight: {
+        Pounds: orderPayload.ShippingMethodDetails?.Weight?.Pounds,
+        Ounces: orderPayload.ShippingMethodDetails?.Weight?.Ounces,
+      },
+      Dimension: {
+        Width: orderPayload.ShippingMethodDetails?.Dimension?.Width,
+        Height: orderPayload.ShippingMethodDetails?.Dimension?.Height,
+        Length: orderPayload.ShippingMethodDetails?.Dimension?.Length,
+      }
     }
   });
   newOrder.save()

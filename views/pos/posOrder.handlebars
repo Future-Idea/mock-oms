@@ -5,6 +5,17 @@
   <p>Customer Name: <span id="customerName">{{order.CustomerDetails.FirstName}} {{order.CustomerDetails.LastName}}</span></p>
   <p>Order Date: <span id="orderDate">{{order.OrderDetails.OrderDate}}</span></p>
   <p>Shipping Method Details: <span id="shipMethodDetail">{{order.ShippingMethodDetails.PromiseDate}}</span></p>
+  {{#if order.OrderDetails.OrderSourceOrderID}}
+  <p>Shipment ID: <span id="shipmentId">{{order.OrderDetails.OrderSourceOrderID}}</span></p>
+  {{/if}}
+  {{#if order.ShippingMethodDetails.Dimension}}
+  <p>Package Length: <span id="length">{{order.ShippingMethodDetails.Dimension.Length}}</span></p>
+  <p>Package Width: <span id="width">{{order.ShippingMethodDetails.Dimension.Width}}</span></p>
+  <p>Package Height: <span id="height">{{order.ShippingMethodDetails.Dimension.Height}}</span></p>
+  {{/if}}
+  {{#if order.ShippingMethodDetails.Weight}}
+  <p>Package Weight: <span id="weight">{{order.ShippingMethodDetails.Weight.Pounds}}</span></p>
+  {{/if}}
   {{#if doc.File.FileContent}}
   <p>Shipping Label:</p><p><span id="shipLabel"><img class ="shippingLabel" src="data:image/png;base64, {{doc.File.FileContent}}"/></span></p>
   {{/if}}
