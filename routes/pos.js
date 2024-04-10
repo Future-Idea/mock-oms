@@ -21,7 +21,7 @@ router.get('/orders/', async (req, res) => {
 router.get('/order/:id', async (req, res) => {
   const order = await getOrder(req.params.id)
   const doc = await getDocument(req.params.id)
-  console.log('Order: %s', order)
+  //console.log('Order: %s', order)
   if (req.headers['content-type'] == 'application/json') {
     res.json(order)
   } else {
