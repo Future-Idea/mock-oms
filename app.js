@@ -31,6 +31,7 @@ const returnsRoutes = require('./routes/returns')
 const pos = require('./routes/pos')
 const oms = require('./routes/oms');
 const rabbit = require('./routes/rabbit')
+const ims = require('./routes/inventory')
 
 
 
@@ -47,4 +48,5 @@ app.use('/returns', returnsRoutes)
 app.use('/pos', pos)
 app.use('/oms',oms)
 app.use('/rabbit',rabbit)
+app.use('/ims' ,ims)
 

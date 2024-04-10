@@ -39,6 +39,26 @@
             float: right;
             border: 10px solid;
         }
+
+        table.tableClass {
+            /* Styling border collapse for table one. */
+            border-collapse: collapse;
+        }
+
+        table {
+            /* Set borders for table */
+            border: 1.5px solid black;
+            /* Use a friendly font size */
+            font-size: 16px;
+        }
+        td,
+        th {
+            border: 2px solid black;
+            padding: 8px;
+            font-size: 20px;
+        }
+
+
         /* Media query for screens less than 600px wide */
         @media screen and (max-width: 600px) {
             .topnav a:not(:first-child) {

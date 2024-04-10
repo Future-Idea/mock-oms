@@ -1,0 +1,47 @@
+{{>_inventoryNavbar}}
+<h2>Welcome to Mock IMS</h2>
+<h2>Download your Inventory file below</h2>
+    <table Class="tableClass">
+      <thead>
+        <tr>
+          <th>locationId</th>
+        <th>sku</th>
+        <th>quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each inventory}}
+        <tr>
+          <td>{{locationId}}</td>
+          <td>{{sku}}</td>
+          <td>{{quantity}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+  </table>
+
+<div style="margin-top: 20px;">
+    <button id="downloadCSV">Download CSV</button>
+</div>
+
+<script>
+    // Function to convert table to CSV and initiate download
+    function downloadCSV() {
+        const headers = Array.from(document.querySelectorAll("table.tableClass th")).map(th => th.textContent);
+        const rows = Array.from(document.querySelectorAll("table.tableClass tbody tr"));
+        const csvContent = "data:text/csv;charset=utf-8," +
+                [headers.join(",")].concat(rows.map(row => Array.from(row.children).map(td => td.textContent).join(","))).join("\n");
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "inventory.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Attach event listener to download button
+    document.getElementById("downloadCSV").addEventListener("click", downloadCSV);
+</script>
+
