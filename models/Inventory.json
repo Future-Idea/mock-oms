@@ -1,0 +1,297 @@
+[
+    {
+      "locationId": "LocationId1",
+      "sku": "sku1",
+      "quantity": 10
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku2",
+      "quantity": 12
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku3",
+      "quantity": 8
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku4",
+      "quantity": 32
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku5",
+      "quantity": 121
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku6",
+      "quantity": 1
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku7",
+      "quantity": 175
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku8",
+      "quantity": 2
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku9",
+      "quantity": 125
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku10",
+      "quantity": 108
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku11",
+      "quantity": 88
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku12",
+      "quantity": 143
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku13",
+      "quantity": 149
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku14",
+      "quantity": 33
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku15",
+      "quantity": 53
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku16",
+      "quantity": 101
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku17",
+      "quantity": 184
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku18",
+      "quantity": 191
+    },
+    {
+      "locationId": "LocationId1",
+      "sku": "sku19",
+      "quantity": 13
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku20",
+      "quantity": 92
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku21",
+      "quantity": 33
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku22",
+      "quantity": 41
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku23",
+      "quantity": 53
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku24",
+      "quantity": 77
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku25",
+      "quantity": 198
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku26",
+      "quantity": 49
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku27",
+      "quantity": 92
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku28",
+      "quantity": 122
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku29",
+      "quantity": 167
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku1",
+      "quantity": 88
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku2",
+      "quantity": 125
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku3",
+      "quantity": 171
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku4",
+      "quantity": 77
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku5",
+      "quantity": 115
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku6",
+      "quantity": 165
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku7",
+      "quantity": 45
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku8",
+      "quantity": 177
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku9",
+      "quantity": 157
+    },
+    {
+      "locationId": "LocationId2",
+      "sku": "sku10",
+      "quantity": 140
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku11",
+      "quantity": 64
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku12",
+      "quantity": 106
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku13",
+      "quantity": 183
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku14",
+      "quantity": 92
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku15",
+      "quantity": 166
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku16",
+      "quantity": 122
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku17",
+      "quantity": 78
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku18",
+      "quantity": 178
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku19",
+      "quantity": 118
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku20",
+      "quantity": 109
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku21",
+      "quantity": 176
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku22",
+      "quantity": 27
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku23",
+      "quantity": 30
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku24",
+      "quantity": 58
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku25",
+      "quantity": 9
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku26",
+      "quantity": 153
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku27",
+      "quantity": 77
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku28",
+      "quantity": 27
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku29",
+      "quantity": 9
+    },
+    {
+      "locationId": "LocationId3",
+      "sku": "sku18",
+      "quantity": 100
+    }
+  ]

@@ -1,6 +1,11 @@
 {{>_inventoryNavbar}}
 <h2>Welcome to Mock IMS</h2>
-<h2>Download your Inventory file below</h2>
+<h2>Inventory</h2>
+
+<div style="margin: 0px 0px 20px 0px;">
+    <button id="downloadCSV">Generate Inventory File</button>
+</div>
+
     <table Class="tableClass">
       <thead>
         <tr>
@@ -20,9 +25,7 @@
     </tbody>
   </table>
 
-<div style="margin-top: 20px;">
-    <button id="downloadCSV">Download CSV</button>
-</div>
+
 
 <script>
     // Function to convert table to CSV and initiate download
