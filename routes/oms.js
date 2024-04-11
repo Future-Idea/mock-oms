@@ -28,8 +28,13 @@ router.get('/orderStatus/:id',async (req,res)=>{
 })
 
 // API Endpoint to Create a New Order in OMS
-router.post('/createOrder',(req, res)=>{
-    res.json(createNewOrder(req.body))
+router.post('/createOrder', async (req, res)=>{
+    const response = createNewOrder(req.body)
+    if(req.body.Products?.[0]?.ProductID === 'spmishra-sku1') {
+        await updateOmsOrderStatus(req.body.orderId, "Cancelled")
+        return res.status(404).send({ error: 'Sku Out of Stock'})
+    }
+    res.json(response)
 })
 
 // API Endpoint to Add a Document to an existig Order

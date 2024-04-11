@@ -30,7 +30,11 @@ exports.createNewOrder = function (orderPayload) {
         Height: orderPayload.ShippingMethodDetails?.Dimension?.Height,
         Length: orderPayload.ShippingMethodDetails?.Dimension?.Length,
       }
-    }
+    },
+    Products: [{
+      ProductID: orderPayload.Products?.[0]?.ProductID,
+      ShipFromWareHouseID: orderPayload.Products?.[0]?.ShipFromWareHouseID,
+    }]
   });
   newOrder.save()
     .then(() => console.log("Order Created"))
