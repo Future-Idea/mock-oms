@@ -8,6 +8,7 @@ exports.getOrderStatus = async function (id) {
 exports.createNewOrder = function (orderPayload) {
   const newOrder = new Order({
     orderId: orderPayload.orderId,
+    orderStatus: 'Confirm',
     CustomerDetails: {
       ID: orderPayload.CustomerDetails.ID,
       Email: orderPayload.CustomerDetails.Email,
